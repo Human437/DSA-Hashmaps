@@ -1,7 +1,8 @@
 const HashMap = require('./HashMap')
+const separateChainingHashMap = require('./separate-chaining-hashmap')
 
 function main(){
-  let lotr = new HashMap(4)
+  let lotr = new separateChainingHashMap(10)
   lotr.MAX_LOAD_RATIO = 0.5
   lotr.SIZE_RATIO = 3
   lotr.set("Hobbit","Bilbo")
@@ -15,8 +16,8 @@ function main(){
   lotr.set('LadyOfLight',"Galadriel")
   lotr.set('HalfElven','Arwen')
   lotr.set('Ent','TreeBeard')
-  console.log(lotr.get('Maiar'))
-  console.log(lotr.get('Hobbit'))
+  // console.log(lotr.get('Maiar'))
+  // console.log(lotr.get('Hobbit'))
   return lotr
 }
 
